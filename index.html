@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>mishka</title>
+	<title>Главная-mishka</title>
 </head>
 <body>
 	<header class="header-top container">
@@ -32,12 +32,12 @@
 			</li>
 		</ul>
 	</header>
-	<main>
-		<article class="card-product container">
+	<main class="container">
+		<article class="order-product container">
 			<h2 class="title-h2">Вязанные корзинки</h2>
-			<span class="card-product__general-product">Товар недели</span>
+			<span class="order-product__general-product">Товар недели</span>
 			<p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-			<div class="table card-product--table">
+			<div class="order-product__table">
 				<ul>
 					<li>Цвет:</li>
 					<li>"Тиффани"/серый</li>
@@ -52,8 +52,18 @@
 				</ul>
 			</div>
 			<img src="http://placehold.it/260x320" alt="">
-			<span class="card-products__price">Цена:990руб.</span>
+			<span class="order-products__price">Цена:990руб.</span>
 			<button type="button" class="btn">Заказать</button>
+			<div class="order-modal">
+				<span class="order-modal__caption">Добавить в корзину</span>
+				<p>Выберите размер:</p>
+				<ul>
+					<li>S</li>
+					<li>M</li>
+					<li>L</li>
+				</ul>
+				<button type="button">Добавить</button>
+			</div>
 		</article>
 		<section class="about-us container">
 			<h2 class="title-h2">Коротко о нас</h2>
@@ -98,17 +108,13 @@
 			<button type="button" class="btn">Написать</button>
 		</section>
 		<section class="contacts container">
-			<div class="table contacts--table">
-				<span>Контакты</span>
-				<ul>
-					<li>E-mail:</li>
-					<li>info@mimimishkashop.ru</li>
-				</ul>
-				<ul>
-					<li>Адрес</li>
-					<li>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</li>
-				</ul>
-			</div>
+			<span class="contacts__caption">Контакты</span>
+			<ul>
+				<li>E-mail:</li>
+				<li>info@mimimishkashop.ru</li>
+				<li>Адрес</li>
+				<li>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</li>
+			</ul>
 			<div class="map">
 				<img src="http://placehold.it/260x320" alt="map">
 			</div>
@@ -116,13 +122,14 @@
 		</section>
 	</main>
 	<footer class="footer container">
+		<h2 class="title-h2--none">Мы в социальных сетях</h2>
 		<ul class="footer-social">
 			<li><a href="#"></a>инстаграмм</li>
 			<li><a href="#"></a>фэйсбук</li>
 			<li><a href="#"></a>твиттер</li>
 		</ul>
 		<div class="copyrights">
-			<span class="copyrights_promo">Разработано</span>
+			<span class="copyrights__promo">Разработано</span>
 			<img src="http://placehold.it/26x32"" alt="logo-htmlacademy">
 		</div>
 	</footer>
