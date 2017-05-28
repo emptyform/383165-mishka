@@ -1,115 +1,116 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<title>Форма заказа-mishka</title>
+    <meta charset="UTF-8">
+    <title>Форма заказа-mishka</title>
 </head>
 <body>
-	<header class="header-top container">
-		<nav class="nav-top">
-			<img src="http://placehold.it/26x32" alt="logo-mishka" class="nav-top__logo">
-			<button type="button" class="nav-top__btn">Меню</button>
-			<ul class="nav-top__list nav-top__list--1">
-				<li><a href="#">Каталог товаров</a></li>
-				<li><a href="#">Вязание на заказ</a></li>
-			</ul>
-			<ul class="nav-top__list nav-top__list--2">
-				<li><a href="#" class="nav-top__search">Поиск по сайту</a></li>
-				<li><a href="#" class="nav-top__cart">Корзина: пока пуста</a></li>
-			</ul>
-		</nav>
-		<h1 class="header-top__title header-top__title--index">Вязание на заказ</h1>
-	</header>
-	<main class="container">
-		<h2 class="title-h2--none">Заполните форму заказа</h2>
-		<p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-		<form action="https://echo.htmlacademy.ru/" method="post" class="order-form">
-			<fieldset>
-				<legend class="order-form__caption">Тип</legend>
-				<ul>
-					<li>
-						<input type="radio" name="type" id="type-1" value="accessory" checked>
-						<label for="type-1">Аксессуар для интерьера</label>
-					</li>
-					<li>
-						<input type="radio" name="type" id="type-2" value="toy">
-						<label for="type-2">Детская игрушка</label>
-					</li>
-				</ul>
-			</fieldset>
-			<fieldset>
-				<legend class="order-form__caption">Цвет</legend>
-				<ul>
-					<li>
-						<input type="checkbox" name="color" id="color-1" value="white" checked>
-						<label for="color-1">Белый</label>
-					</li>
-					<li>
-						<input type="checkbox" name="color" id="color-2" value="grey" checked>
-						<label for="color-2">Серый</label>
-					</li>
-					<li>
-						<input type="checkbox" name="color" id="color-3" value="tiffany">
-						<label for="color-3">Тиффани</label>
-					</li>
-					<li>
-						<input type="checkbox" name="color" id="color-4" value="black">
-						<label for="color-4">Черный</label>
-					</li>
-					<li>
-						<input type="checkbox" name="color" id="color-5" value="pink">
-						<label for="color-5">Розовый</label>
-					</li>
-					<li>
-						<input type="checkbox" name="color" id="color-6" value="orange">
-						<label for="color-6">Оранжевый</label>
-					</li>
-				</ul>
-			</fieldset>
-			<fieldset>
-				<legend class="order-form__caption">Фио</legend>
-				<ul>
-					<li>
-						<label for="name-field">Имя:</label>
-						<input type="text" name="name" id="name-field" placeholder="Введите ваше имя*" required>
-					</li>
-					<li>
-						<label for="surname-field">Фамилия:</label>
-						<input type="text" name="surname" id="surname-field" placeholder="Укажите фамилию*" required>
-					</li>
-					<li>
-						<label for="patronymic-field">Отчество:</label>
-						<input type="text" name="patronymic" id="patronymic-field" placeholder="Отчество, если желаете">
-					</li>
-				</ul>
-			</fieldset>
-			<fieldset>
-				<legend class="order-form__caption">Тел</legend>
-				<input type="tel" name="tel" pattern="\+7\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" placeholder="+7 XXX XX XX*" required class="order-form--tel">
-			</fieldset>
-			<fieldset>
-				<legend class="order-form__caption">E-mail</legend>
-				<input type="e-mail" name="e-mail" placeholder="Ваш Email*" required class="order-form--email">
-			</fieldset>
-			<fieldset>
-				<legend class="order-form__caption">Доп</legend>
-				<textarea name="" id="" cols="30" rows="10">Опишите все ваши пожелания к заказу</textarea>
-			</fieldset>
-			<p>*Поля обязательные для заполнения</p>
-			<button type="submit" class="btn">Отправить заказ</button>
-		</form>
-	</main>
-	<footer class="footer container">
-		<h2 class="title-h2--none">Мы в социальных сетях</h2>
-		<ul class="footer-social">
-			<li><a href="#"></a>инстаграмм</li>
-			<li><a href="#"></a>фэйсбук</li>
-			<li><a href="#"></a>твиттер</li>
-		</ul>
-		<div class="copyrights">
-			<span class="copyrights__promo">Разработано</span>
-			<img src="http://placehold.it/26x32" alt="logo-htmlacademy">
-		</div>
-	</footer>
+    <header class="header-top container">
+        <nav class="nav-top">
+            <img src="http://placehold.it/26x32" alt="logo-mishka" class="nav-top__logo">
+            <button type="button" class="nav-top__btn">Меню</button>
+            <ul class="nav-top__list nav-top__list--1">
+                <li><a href="#">Каталог товаров</a></li>
+                <li><a href="#">Вязание на заказ</a></li>
+            </ul>
+            <ul class="nav-top__list nav-top__list--2">
+                <li><a href="#" class="nav-top__search">Поиск по сайту</a></li>
+                <li><a href="#" class="nav-top__cart">Корзина: пока пуста</a></li>
+            </ul>
+        </nav>
+        <h1 class="header-top__title header-top__title--index">Вязание на заказ</h1>
+    </header>
+    <main class="container">
+        <h2 class="title-h2--none">Заполните форму заказа</h2>
+        <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <form action="https://echo.htmlacademy.ru/" method="post" class="order-form">
+            <fieldset>
+                <legend class="order-form__caption">Тип</legend>
+                <ul>
+                    <li>
+                        <input type="radio" name="type" id="type-1" value="accessory" checked>
+                        <label for="type-1">Аксессуар для интерьера</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="type" id="type-2" value="toy">
+                        <label for="type-2">Детская игрушка</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend class="order-form__caption">Цвет</legend>
+                <ul>
+                    <li>
+                        <input type="checkbox" name="color" id="color-1" value="white" checked>
+                        <label for="color-1">Белый</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="color" id="color-2" value="grey" checked>
+                        <label for="color-2">Серый</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="color" id="color-3" value="tiffany">
+                        <label for="color-3">Тиффани</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="color" id="color-4" value="black">
+                        <label for="color-4">Черный</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="color" id="color-5" value="pink">
+                        <label for="color-5">Розовый</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="color" id="color-6" value="orange">
+                        <label for="color-6">Оранжевый</label>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend class="order-form__caption">Фио</legend>
+                <ul>
+                    <li>
+                        <label for="name-field">Имя:</label>
+                        <input type="text" name="name" id="name-field" placeholder="Введите ваше имя*" required>
+                    </li>
+                    <li>
+                        <label for="surname-field">Фамилия:</label>
+                        <input type="text" name="surname" id="surname-field" placeholder="Укажите фамилию*" required>
+                    </li>
+                    <li>
+                        <label for="patronymic-field">Отчество:</label>
+                        <input type="text" name="patronymic" id="patronymic-field" placeholder="Отчество, если желаете">
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend class="order-form__caption">Тел</legend>
+                <input type="tel" name="tel" pattern="\+7\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}" placeholder="+7 XXX XX XX*" required class="order-form--tel">
+            </fieldset>
+            <fieldset>
+                <legend class="order-form__caption">E-mail</legend>
+                <input type="e-mail" name="e-mail" placeholder="Ваш Email*" required class="order-form--email">
+            </fieldset>
+            <fieldset>
+                <legend class="order-form__caption">Доп</legend>
+                <textarea name="" id="" cols="30" rows="10">Опишите все ваши пожелания к заказу</textarea>
+            </fieldset>
+            <p>*Поля обязательные для заполнения</p>
+            <button type="submit" class="btn">Отправить заказ</button>
+        </form>
+    </main>
+    <footer class="footer container">
+        <h2 class="title-h2--none">Мы в социальных сетях</h2>
+        <ul class="footer-social">
+            <li><a href="#"></a>инстаграмм</li>
+            <li><a href="#"></a>фэйсбук</li>
+            <li><a href="#"></a>твиттер</li>
+        </ul>
+        <div class="copyrights">
+            <span class="copyrights__promo">Разработано</span>
+            <img src="http://placehold.it/26x32" alt="logo-htmlacademy">
+        </div>
+    </footer>
 </body>
 </html>
+    
