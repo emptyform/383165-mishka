@@ -1,6 +1,41 @@
-.header-top {
-  background-color: #ffffff;
-}
+@header-top-bg-color: #fafafa;
+@header-top-h1-color: #000000;
+@header-top-a-bg-color: #63d1bb;
+@header-top-a-last-color: #56c3b4;
 
+.header-top {
+  min-height: 570px;
+  background-color: @header-top-bg-color;
+  background-image: url(../../img/hero-mobile@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: -140px 70px;
+
+  &__title {
+    font-size: 27px;
+    line-height: 30px;
+    color: @header-top-h1-color;
+  }
+
+  &__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__a {
+    display: block;
+    min-height: 100px;
+    text-decoration: none;
+    background-color: @header-top-a-bg-color;
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 700px;
+    line-height: 24px;
+  }
+
+  &__a--color {
+    background-color: @header-top-a-last-color;
+  }
+}
 
 
