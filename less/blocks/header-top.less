@@ -1,8 +1,3 @@
-@header-top-bg-color: #fafafa;
-@header-top-h1-color: #000000;
-@header-top-a-bg-color: #63d1bb;
-@header-top-a-last-color: #56c3b4;
-
 .header-top {
   min-height: 570px;
   background-color: @header-top-bg-color;
@@ -13,20 +8,18 @@
   &__title {
     font-size: 27px;
     line-height: 30px;
-    color: @header-top-h1-color;
+    font-weight: 700;
   }
 
   &__links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    .list-style-none();
   }
 
   &__a {
     display: block;
     min-height: 100px;
     text-decoration: none;
-    background-color: @header-top-a-bg-color;
+    background-color: @header-top-link-1-color;
     color: #ffffff;
     font-size: 19px;
     font-weight: 700px;
@@ -34,7 +27,23 @@
   }
 
   &__a--color {
-    background-color: @header-top-a-last-color;
+    background-color: @header-top-link-2-color;
+  }
+
+  &__a::after {
+    width: 20px;
+    height: 20px;
+    background-image: url("../../img/icon-interior.svg");
+    background-repeat: no-repeat;
+  }
+
+  &__a--color::after {
+    content: "";
+    display: block;
+    width: 61px;
+    height: 61px;
+    background-image: url("../../img/icon-toy.svg");
+    background-repeat: no-repeat;
   }
 }
 

@@ -1,0 +1,51 @@
+.title-h2--none {
+  .title-none-style();
+}
+
+.footer {
+  &__social {
+    .list-style-none()
+  }
+
+  &__insta::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../img/icon-insta.svg");
+    background-repeat: no-repeat;
+  }
+
+  &__face::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../img/icon-fb.svg");
+    background-repeat: no-repeat;
+  }
+
+  &__twit::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../img/icon-twitter.svg");
+    background-repeat: no-repeat;
+  }
+
+  &__promo {
+    font-size: 19px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  &__copyrights a::after {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 34px;
+    background-image: url("../../img/htmlacademy.svg");
+    background-repeat: no-repeat;
+  }
+}

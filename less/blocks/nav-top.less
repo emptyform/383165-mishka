@@ -1,25 +1,18 @@
-@nav-top-height: 80px;
-@border: 2px solid #ececec;
-@nav-top-bg-color: #ffffff;
-
 .nav-top__list {
   display: none;
 }
 
 .nav-top {
   min-height: @nav-top-height;
-  border-bottom: @border;
+  border-bottom: @nav-top-border;
   background-color: @nav-top-bg-color;
 
   &__btn {
-    background: none;
-    border: none;
+    .btn-none-style();
   }
 
   &__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    .list-style-none()
   }
 
   a {
@@ -32,6 +25,6 @@
 
   li {
     min-height: @nav-top-height;
-    border-top: @border;
+    border-top: @nav-top-border;
   }
 }

@@ -5,6 +5,7 @@
   <title>Главная-mishka</title>
   <link rel="stylesheet" href="css/normalaize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
   <header class="header-top container">
@@ -35,11 +36,11 @@
     </ul>
   </header>
   <main class="container">
-    <article class="order-product container">
+    <article class="order-product">
       <h2 class="title-h2">Вязанные корзинки</h2>
-      <span class="order-product__general-product">Товар недели</span>
+      <span class="order-product__week-product">Товар недели</span>
       <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-      <div class="table order-product--table">
+      <div class="order-product__table">
         <ul>
           <li>Цвет:</li>
           <li>"Тиффани"/серый</li>
@@ -53,8 +54,8 @@
           <li>15см</li>
         </ul>
       </div>
-      <img src="http://placehold.it/260x320" alt="">
-      <span class="order-products__price">Цена:990руб.</span>
+      <img src="img/triple-set-mobile@1x.jpg" alt="product-img" width="260" height="315" >
+      <span class="order-product__price">Цена:990руб.</span>
       <button type="button" class="btn">Заказать</button>
       <div class="order-modal">
         <span class="order-modal__caption">Добавить в корзину</span>
@@ -67,31 +68,31 @@
         <button type="button">Добавить</button>
       </div>
     </article>
-    <section class="about-us container">
+    <section class="about-us">
       <h2 class="title-h2">Коротко о нас</h2>
       <ul class="about-us__list">
         <li>
-          <img src="http://placehold.it/26x32" alt="">
+          <img src="img/icon-feature-1.svg" alt="icon-feature">
           <p>Экологически чистые материалы</p>
         </li>
         <li>
-          <img src="http://placehold.it/26x32" alt="">
+          <img src="img/icon-feature-2.svg" alt="icon-feature">
           <p>Скандинавский стиль по российской цене</p>
         </li>
         <li>
-          <img src="http://placehold.it/26x32" alt="">
+          <img src="img/icon-feature-3.svg" alt="icon-feature">
           <p>Увеличивает лайки на фотографиях</p>
         </li>
         <li>
-          <img src="http://placehold.it/26x32" alt="">
+          <img src="img/icon-feature-4.svg" alt="icon-feature">
           <p>Связано вручную с любовью и умилением</p>
         </li>
         <li>
-          <img src="http://placehold.it/26x32" alt="">
+          <img src="img/icon-feature-5.svg" alt="icon-feature">
           <p>Поддержка отечественного производителя</p>
         </li>
         <li>
-          <img src="http://placehold.it/26x32" alt="">
+          <img src="img/icon-feature-6.svg" alt="icon-feature">
           <p>Поставляется в подарочной упаковке</p>
         </li>
       </ul>
@@ -104,13 +105,13 @@
         </p>
         <span>Анастасия Красильникова</span>
         <span>@misssssiskras</span>
-        <button type="button" class="review-slider__left">стрелка влево</button>
-        <button type="button" class="review-slider__right">стрелка вправо</button>
+        <button type="button" class="review-slider__left btn"><img src="img/icon-left-arrow.svg" alt=""></button>
+        <button type="button" class="review-slider__right btn"><img src="img/icon-left-arrow.svg" alt=""></button>
       </div>
       <button type="button" class="btn">Написать</button>
     </section>
     <section class="contacts container">
-      <div class="table contacts--table">
+      <div class="contacts__table">
         <span class="contacts__caption">Контакты</span>
         <ul>
           <li>E-mail:</li>
@@ -121,22 +122,22 @@
           <li>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</li>
         </ul>
       </div>
-      <div class="map">
-        <img src="http://placehold.it/260x320" alt="map">
+      <div class="map__contacts">
+        <img src="img/map-mobile@1x.jpg" alt="map" width="320" height="457" >
       </div>
       <button type="button" class="btn">Напишите нам</button>
     </section>
   </main>
   <footer class="footer container">
-    <h2 class="title-h2--none">Мы в социальных сетях</h2>
-    <ul class="footer-social">
-      <li><a href="#"></a>инстаграмм</li>
-      <li><a href="#"></a>фэйсбук</li>
-      <li><a href="#"></a>твиттер</li>
+    <h2 class="title-h2 text-none">Мы в социальных сетях</h2>
+    <ul class="footer__social">
+      <li><a href="#" class="footer__insta"><span class="text-none">Инстаграмм<span></a></li>
+      <li><a href="#" class="footer__face"><span class="text-none">фэйсбук<span></a></li>
+      <li><a href="#" class="footer__twit"><span class="text-none">Твиттер<span></a></li>
     </ul>
-    <div class="copyrights">
-      <span class="copyrights__promo">Разработано</span>
-      <img src="http://placehold.it/26x32" alt="logo-htmlacademy">
+    <div class="footer__copyrights">
+      <span class="footer__promo">Разработано</span>
+      <a href="https://htmlacademy.ru/" title="перейти на сайт академии"><span class="text-none">HtmlAcademy</span></a>
     </div>
   </footer>
 </body>
