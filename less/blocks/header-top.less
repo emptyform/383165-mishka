@@ -6,9 +6,7 @@
   background-position: -140px 70px;
 
   &__title {
-    font-size: 27px;
-    line-height: 30px;
-    font-weight: 700;
+    .text-parameter(27px, 30px, 700);
   }
 
   &__links {
@@ -20,28 +18,21 @@
     min-height: 100px;
     text-decoration: none;
     background-color: @header-top-link-1-color;
-    color: #ffffff;
-    font-size: 19px;
-    font-weight: 700px;
-    line-height: 24px;
+    .text-parameter(19px, 24px, 700, #fff);
   }
 
   &__a--color {
     background-color: @header-top-link-2-color;
   }
 
-  &__a::after {
-    width: 20px;
-    height: 20px;
+  &__a {
+    .after-element(62px, 62px);
     background-image: url("../../img/icon-interior.svg");
     background-repeat: no-repeat;
   }
 
-  &__a--color::after {
-    content: "";
-    display: block;
-    width: 61px;
-    height: 61px;
+  &__a--color {
+    .after-element(62px, 62px);
     background-image: url("../../img/icon-toy.svg");
     background-repeat: no-repeat;
   }

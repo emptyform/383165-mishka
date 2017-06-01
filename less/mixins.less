@@ -48,6 +48,8 @@
   overflow: hidden;
 }
 
+// миксин для псевдоэлементов after
+
 .after-element(@width: 0px, @height: 0px) {
   &::after {
     content: "";
@@ -55,4 +57,33 @@
     width: @width;
     height: @height;
   }
+}
+
+// миксин для псевдоэлементов before
+
+.before-element(@width: 0px, @height: 0px) {
+  &::before {
+    content: "";
+    display: block;
+    width: @width;
+    height: @height;
+  }
+}
+
+// миксин для параметров текста
+
+.text-parameter(@font-size: 16px, @line-height: 16px, @font-weight: 400, @color: #000) {
+  font-size: @font-size;
+  line-height: @line-height;
+  font-weight: @font-weight;
+  color: @color;
+}
+
+// миксин для кнопок
+
+.btn-style {
+  width: 259px;
+  height: 52px;
+  border: 2px solid #444;
+  background-color: #fff;
 }
