@@ -1,7 +1,7 @@
 .header-top {
   min-height: 570px;
   background-color: @header-top-bg-color;
-  background-image: url(../../img/hero-mobile@1x.jpg);
+  background-image: url("../../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: -140px 70px;
 
@@ -14,6 +14,7 @@
   }
 
   &__a {
+    .after-element(62px, 62px);
     display: block;
     min-height: 100px;
     text-decoration: none;
@@ -22,17 +23,16 @@
   }
 
   &__a--color {
+    .after-element(62px, 62px);
     background-color: @header-top-link-2-color;
   }
 
-  &__a {
-    .after-element(62px, 62px);
+  &__a::after {
     background-image: url("../../img/icon-interior.svg");
     background-repeat: no-repeat;
   }
 
-  &__a--color {
-    .after-element(62px, 62px);
+  &__a--color::after {
     background-image: url("../../img/icon-toy.svg");
     background-repeat: no-repeat;
   }
