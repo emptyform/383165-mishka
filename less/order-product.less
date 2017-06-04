@@ -1,19 +1,66 @@
-.order-product__week-product {
-  .text-parameter(17px, 20px, 700, @header-top-link-1-color);
-  text-transform: uppercase;
+.main-top {
+  display: flex;
+  flex-direction: column;
 }
 
 .order-product {
-  p,
-  &__table {
-    .text-parameter(15px, 24px, 400, #444);
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+
+  &__week-product {
+    .text-parameter(17px, 20px, 700, @header-top-link-1-color);
+    text-transform: uppercase;
+    margin-top: -15px;
   }
 
   &__table {
+    width: 100%;
     .table-style();
+    margin-bottom: 30px;
+    .text-parameter(15px, 24px, 400, #444);
+
+    p {
+      display: table-caption;
+      .text-parameter(15px, 24px, 400, #444);
+    }
+  }
+
+  &__table li {
+    border-bottom: 1px solid #ececec;
+    padding: 10px 0;
   }
 
   &__price {
+    text-align: center;
+    padding: 20px 0;
     .text-parameter(17px, 24px, 700);
+  }
+}
+
+@media (min-width: 768px) {
+  .order-product {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0;
+
+    .title-h2 {
+      .text-parameter(43px, 50px, 700);
+    }
+
+    &__week-product {
+      margin-top: 50px;
+      margin-left: auto;
+      width: 10%;
+      text-align: center;
+      .text-parameter(17px, 17px, 700, @header-top-link-1-color);
+    }
+
+    &__table {
+      width: 290px;
+      margin-right: 100px;
+      flex-wrap: wrap-reverse;
+      order: ;
+    }
   }
 }

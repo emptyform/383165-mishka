@@ -2,15 +2,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 568px;
   margin: 0 auto;
   background-color: @header-top-bg-color;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center 60px;
 
   &__title {
     padding: 0 30px;
+    margin-top: 80px;
     text-align: center;
     .text-parameter(27px, 30px, 700);
   }
@@ -54,7 +54,6 @@
 
 @media (min-width: 768px) {
   .header-top {
-    min-height: 836px;
     background-image: url("../img/hero-desktop.jpg");
 
     &__title {
