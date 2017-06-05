@@ -1,6 +1,23 @@
 .about-us {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  margin-top: 50px;
+
+  h2 {
+    .text-parameter(25px, 30px, 700);
+  }
+
+  p {
+    .text-parameter(17px, 20px, 700);
+  }
+
   &__list {
     .list-style-none();
     .text-parameter(17px, 20px, 700);
+  }
+
+  &__list svg {
+    fill: @header-top-link-1-color;
   }
 }

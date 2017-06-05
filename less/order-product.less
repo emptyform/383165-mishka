@@ -4,9 +4,15 @@
 }
 
 .order-product {
+  position: relative;
   display: flex;
   flex-direction: column;
+  width: auto;
   padding: 0 30px;
+
+  h2 {
+    .text-parameter(25px, 30px, 700);
+  }
 
   &__week-product {
     .text-parameter(17px, 20px, 700, @header-top-link-1-color);
@@ -44,7 +50,7 @@
     flex-wrap: wrap;
     padding-left: 0;
 
-    .title-h2 {
+    h2 {
       .text-parameter(43px, 50px, 700);
     }
 
@@ -60,7 +66,6 @@
       width: 290px;
       margin-right: 100px;
       flex-wrap: wrap-reverse;
-      order: ;
     }
   }
 }

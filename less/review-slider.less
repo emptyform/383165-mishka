@@ -3,11 +3,22 @@
     .text-parameter(15px, 30px, 400, #444);
   }
 
-  .btn {
-    .btn-none-style();
+  &__btn-block {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__left,
+  &__right
+   {
+    width: 50%;
+    background: none;
+    border: 1px solid #ececec;
+    padding: 10px;
   }
 
   &__right {
-    transform: rotate(180deg);
+    transform: scale(-1, 1);
   }
 }
