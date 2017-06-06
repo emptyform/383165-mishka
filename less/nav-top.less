@@ -9,7 +9,7 @@
   text-align: center;
 
   &__menu {
-    display: none;
+    display: block;
     position: absolute;
     top: 80px;
     width: 100%;
@@ -34,7 +34,7 @@
   }
 
   a {
-    display: block;
+    display: none;
     padding: 30px;
     border-top: 1px solid #ececec;
     text-decoration: none;
@@ -61,6 +61,16 @@
       border: none;
     }
 
+    &__list--2 {
+      .nav-top__cart {
+        border-left: 1px solid #ececec;
+      }
+
+      .nav-top__search {
+        padding-bottom: 52px;
+      }
+    }
+
     &__btn {
       display: none;
     }
@@ -77,10 +87,6 @@
       display: flex;
     }
 
-    &__list li {
-
-    }
-
     &__list--2 {
       margin-left: auto;
       margin-right: 30px;
@@ -93,11 +99,13 @@
 
     &__list--1 a {
       .text-parameter(15px, 24px, 700);
-      padding: 20px 30px;
+      padding: 10px 30px;
+      margin-top: 10px;
     }
 
     &__list--2 a {
       padding: 28px 30px;
+      padding-left: 80px;
     }
 
     &__search span {
@@ -105,7 +113,65 @@
     }
 
     &__list--2 svg {
-    left: -20px;
+      left: 25px;
+    }
+
+    &__list--2 {
+      .nav-top__search svg {
+        left: 45px;
+      }
+    }
+
+    &__list--2 {
+      position: relative;
+    }
+
+    &__delivery {
+      position: absolute;
+      top: 100px;
+      right: 30px;
+      a {
+        .text-parameter(15px, 24px, 400, #444);
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1250px) {
+  .nav-top {
+    padding: 0 100px;
+
+    &__list--2 {
+      margin-right: 0px;
+    }
+
+    &__menu {
+      width: 1050px;
+    }
+
+    &__logo {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__delivery {
+      right: -10px;
+    }
+
+    &__list--1 {
+      width: 50%;
+      flex-wrap: wrap;
+
+      li:first-child {
+        border-right: 1px solid #ececec;
+      }
+
+      a {
+        .text-parameter(17px, 24px, 700);
+        padding-top: 20px;
+        padding-bottom: 25px;
+      }
     }
   }
 }

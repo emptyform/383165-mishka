@@ -46,26 +46,60 @@
 
 @media (min-width: 768px) {
   .order-product {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-left: 0;
+    position: relative;
+    padding: 0 50px;
 
     h2 {
       .text-parameter(43px, 50px, 700);
     }
 
     &__week-product {
-      margin-top: 50px;
-      margin-left: auto;
-      width: 10%;
+      position: absolute;
+      display: block;
+      top: 65px;
+      right: 70px;
+      width: 70px;
       text-align: center;
       .text-parameter(17px, 17px, 700, @header-top-link-1-color);
     }
 
     &__table {
       width: 290px;
-      margin-right: 100px;
-      flex-wrap: wrap-reverse;
+    }
+
+    img {
+      position: absolute;
+      top: 150px;
+      right: 50px;
+    }
+
+    &__btn {
+      width: 290px;
+    }
+
+    &__price {
+      width: 290px;
+    }
+  }
+}
+
+@media (min-width: 1250px) {
+  .order-product {
+    padding-left: 275px;
+
+    h2 {
+      .text-parameter(53px, 57px, 700);
+    }
+
+    img {
+      right: 100px;
+    }
+
+    &__week-product {
+      position: absolute;
+      left: 120px;
+
+
     }
   }
 }

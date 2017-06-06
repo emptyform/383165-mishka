@@ -15,8 +15,7 @@
     }
   }
 
-  &__caption {
-    display: table-caption;
+  h2 {
     margin-bottom: 30px;
     .text-parameter(18px, 30px, 700);
   }
@@ -41,5 +40,29 @@
 
   &__map img {
     margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contacts {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 50px;
+
+    &__map {
+      width: 100%;
+    }
+
+    &__table  {
+      display: flex;
+      width: 668px;
+      justify-content: center;
+      .text-parameter(17px, 30px, 400);
+    }
+
+    h2 {
+      .text-parameter(43px, 50px, 700);
+      width: 60%;
+    }
   }
 }

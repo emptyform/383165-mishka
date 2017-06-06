@@ -8,3 +8,82 @@
     .text-parameter(25px, 30px, 700);
   }
 }
+
+.review-slider {
+  p {
+    .text-parameter(15px, 30px, 400, #444);
+  }
+
+  &__btn-block {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__left,
+  &__right
+   {
+    width: 50%;
+    background: none;
+    border: 1px solid #ececec;
+    padding: 10px;
+  }
+
+  &__right {
+    transform: scale(-1, 1);
+  }
+}
+
+@media (min-width: 768px) {
+  .review {
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 50px;
+
+    h2 {
+      order: 1;
+      .text-parameter(43px, 50px, 700);
+    }
+  }
+
+  .review-slider {
+    order: 3;
+
+    &__btn {
+      order: 2;
+      width: 175px;
+      margin-left: auto;
+      align-self: center;
+    }
+
+    &__btn-block {
+      position: absolute;
+      bottom: -20px;
+      right: 50px;
+    }
+
+    &__left,
+    &__right {
+      border: none;
+    }
+
+    &__user {
+      .text-parameter(17px, 30px, 700);
+    }
+  }
+}
+
+@media (min-width: 1250px) {
+  .review {
+    padding-left: 275px;
+    padding-right: 100px;
+  }
+
+  .review-slider {
+    &__btn-block {
+      right: 100px;
+    }
+  }
+}
+
