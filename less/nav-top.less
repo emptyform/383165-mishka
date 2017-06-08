@@ -28,11 +28,20 @@
     margin-bottom: 20px;
   }
 
+  &__logo--desktop,
+  &__logo--tab {
+    display: none;
+  }
+
   &__btn {
     position: absolute;
     right: 30px;
     top: 30px;
     .btn-none-style();
+  }
+
+  &__btn--none {
+    display: none;
   }
 
   &__list {
@@ -62,6 +71,16 @@
   .nav-top {
     flex-direction: row;
     padding: 0 30px;
+
+    &__logo--mobile {
+      display: none;
+    }
+
+    &__logo--tab {
+      display: block;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
 
     a {
       border: none;
@@ -148,6 +167,19 @@
 @media (min-width: 1250px) {
   .nav-top {
     padding: 0 100px;
+
+    &__logo--tab {
+      display: none;
+    }
+
+    &__logo {
+      margin-top: 0px;
+      margin-bottom: -5px;
+    }
+
+    &__logo--desktop {
+      display: block;
+    }
 
     &__list--2 {
       margin-right: 0px;

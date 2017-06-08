@@ -1,8 +1,14 @@
 .contacts {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 0 30px;
   margin-top: 50px;
+
+  &__map-tab--none,
+  &__map-desktop--none {
+    display: none;
+  }
 
   &__table {
     .table-style();
@@ -41,6 +47,10 @@
   &__map img {
     margin-bottom: 30px;
   }
+
+  &__flag--none {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -49,6 +59,25 @@
     flex-wrap: wrap;
     padding: 0 50px;
 
+    &__map-mobile--none {
+      display: none;
+    }
+
+    &__map-tab--none {
+      display: block;
+      margin-left: -15px;
+    }
+
+    &__flag--none {
+      display: block;
+    }
+
+    &__flag {
+      position: absolute;
+      right: 170px;
+      top: 20px;
+    }
+
     &__map {
       width: 100%;
     }
@@ -56,13 +85,67 @@
     &__table  {
       display: flex;
       width: 668px;
-      justify-content: center;
       .text-parameter(17px, 30px, 400);
+      padding: 0;
+      margin: 0;
+
+      ul {
+        width: 50%;
+        padding: 0;
+        margin:0;
+      }
+
+      li:first-child {
+        width: 25%;
+      }
     }
 
     h2 {
       .text-parameter(43px, 50px, 700);
       width: 60%;
+    }
+
+    &__map-btn {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: 1250px) {
+  .contacts {
+    position: relative;
+
+    h2 {
+      width: 100%;
+    }
+
+
+    &__table {
+      .table-style();
+      width: 30%;
+    }
+
+    &__map-tab--none {
+      display: none;
+    }
+
+    &__map-desktop--none {
+      display: block;
+      position: absolute;
+      bottom: -200px;
+      right: 100px;
+      z-index: -2;
+    }
+
+    &__map-btn {
+      margin-right: auto;
+      margin-left: 0;
+      margin-top: 100px;
+    }
+
+    &__flag {
+      left: 0px;
+      top: 20px;
     }
   }
 }
