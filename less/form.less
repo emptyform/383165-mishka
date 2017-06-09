@@ -1,0 +1,141 @@
+.header-top {
+  background-image: none;
+  background-color: #f1f1f1;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+
+  p {
+    .text-parameter(13px, 24px, 400, #444);
+    padding: 0 30px;
+  }
+}
+
+.order-form {
+  padding: 0 30px;
+
+  ul {
+    .list-style-none();
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="radio"] + label,
+  input[type="checkbox"] + label {
+    .text-parameter(17px, 18px, 700,);
+    cursor: pointer;
+  }
+
+  input[type="radio"] + label::before,
+  input[type="checkbox"] + label::before {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 39px;
+    border: 2px solid #444;
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+    background-position: -50px -50px;
+  }
+
+  input[type="radio"] + label::before {
+    border-radius: 50%;
+  }
+
+  input[type="radio"]:checked + label::before {
+    background-position: -8px -8px;
+  }
+
+  input[type="checkbox"]:checked + label::before {
+    background-position: -10px -65px;
+  }
+
+  fieldset {
+    border: none;
+    border-top: 1px solid @header-top-link-1-color;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  legend {
+    padding-right: 10px;
+    text-transform: uppercase;
+    .text-parameter(17px, 16px, 700, @header-top-link-1-color);
+  }
+
+  input[type="text"],
+  input[type="e-mail"],
+  input[type="tel"] {
+    display: block;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__full-name li,
+  &__full-contact li {
+    border-bottom: 2px solid #000;
+
+    label {
+      display: block;
+      .text-parameter(17px, 18px, 700,);
+      margin-top: 10px;
+    }
+  }
+
+  textarea {
+    border: 2px solid #000;
+    .text-parameter(17px, 18px, 400, #444);
+    width: 260px;
+  }
+
+  &__btn {
+    width: 260px;
+  }
+
+  &__full-contact li {
+    position: relative;
+
+    svg {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .order-form {
+    padding: 0 50px;
+
+    &__radio {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__radio li {
+      margin-left: 150px;
+    }
+
+    fieldset {
+      border: none;
+      padding: 0;
+      margin-top: 10px;
+    }
+
+    &__checkbox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    &__checkbox li {
+      width: 40%;
+    }
+  }
+}
