@@ -8,44 +8,64 @@
   display: flex;
   flex-direction: column;
   width: auto;
-  padding: 0 30px;
 
-  &__img-tab--none,
-  &__img-desktop--none {
-    display: none;
-  }
+  padding: 0 30px;
+  padding-top: 7px;
 
   h2 {
     .text-parameter(25px, 30px, 700);
   }
 
   &__week-product {
+    margin-top: -17px;
+
     .text-parameter(17px, 20px, 700, @header-top-link-1-color);
     text-transform: uppercase;
-    margin-top: -15px;
   }
 
   &__table {
     width: 100%;
+    margin-top: 9px;
     .table-style();
-    margin-bottom: 30px;
+
     .text-parameter(15px, 24px, 400, #444);
 
     p {
       display: table-caption;
+
+      margin-bottom: 18px;
+
       .text-parameter(15px, 24px, 400, #444);
     }
   }
 
   &__table li {
+    padding-top: 7px;
+    padding-bottom: 8px;
+    padding-right: 14px;
+
     border-bottom: 1px solid #ececec;
-    padding: 10px 0;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__image {
+    margin-top: 28px;
   }
 
   &__price {
+    margin-top: 24px;
+
     text-align: center;
-    padding: 20px 0;
     .text-parameter(17px, 24px, 700);
+  }
+
+  &__btn {
+    margin-top: 26px;
+
+    .btn-style();
   }
 }
 
