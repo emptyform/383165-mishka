@@ -61,20 +61,39 @@
 
 @media (min-width: 768px) {
   .header-top {
-    background-image: url("../img/hero-desktop.jpg");
 
     &__title {
+      margin-top: 153px;
+      margin-bottom: 373px;
+      padding: 0 50px;
+
       .text-parameter(43px, 50px, 700);
     }
 
     &__links {
       display: flex;
-      margin-top: 370px;
+
       padding: 0 50px;
     }
 
     &__links li {
       flex-basis: 50%;
+    }
+
+    &__a {
+      padding-left: 36px;
+      padding-top: 28px;
+
+      .text-parameter(20px, 30px, 700, #fff);
+    }
+
+    &__a--interior img {
+      top: 30px;
+    }
+
+    &__a--plays img {
+      top: 32px;
+      right: 34px;
     }
   }
 }
