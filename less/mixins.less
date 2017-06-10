@@ -73,9 +73,17 @@
 
 // миксин для кнопок
 
-.btn-style {
+.btn-style() {
   width: 259px;
   height: 52px;
   border: 2px solid #444;
   background-color: #fff;
+}
+
+// миксин для веременной обводки
+
+.border(@color: #000) {
+  border-width: 1px;
+  border-style: solid;
+  border-color: @color;
 }

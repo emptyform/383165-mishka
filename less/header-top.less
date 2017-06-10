@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   margin: 0 auto;
+
   background-color: @header-top-bg-color;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -10,14 +12,30 @@
 
   &__title {
     padding: 0 30px;
-    margin-top: 80px;
+    margin-top: 70px;
+    margin-bottom: 123px;
+
     text-align: center;
     .text-parameter(27px, 30px, 700);
   }
 
   &__links {
     .list-style-none();
-    margin-top: 90px;
+  }
+
+  &__a {
+    display: block;
+
+    padding: 25px 30px;
+    padding-bottom: 29px;
+
+    .text-parameter(19px, 24px, 700, #fff);
+    text-decoration: none;
+    background-color: @header-top-link-1-color;
+  }
+
+  &__a--plays {
+    background-color: @header-top-link-2-color;
   }
 
   &__a--interior,
@@ -31,25 +49,13 @@
   }
 
   &__a--interior img {
-    top: 25px;
-    right: 30px;
+    top: 22px;
+    right: 36px;
   }
 
   &__a--plays img {
-    top: 25px;
-    right: 20px;
-  }
-
-  &__a {
-    display: block;
-    padding: 30px;
-    text-decoration: none;
-    background-color: @header-top-link-1-color;
-    .text-parameter(19px, 24px, 700, #fff);
-  }
-
-  &__a--plays {
-    background-color: @header-top-link-2-color;
+    top: 20px;
+    right: 26px;
   }
 }
 
