@@ -64,89 +64,111 @@
 
   &__btn {
     margin-top: 26px;
-
-    .btn-style();
   }
 }
 
 @media (min-width: 768px) {
   .order-product {
-    position: relative;
     padding: 0 50px;
 
-    &__img-mobile--none {
-      display: none;
-    }
-
-    &__img-tab--none {
-      display: block;
-    }
-
     h2 {
+      margin-top: 47px;
+      margin-left: 0px;
+
       .text-parameter(43px, 50px, 700);
     }
 
     &__week-product {
       position: absolute;
       display: block;
-      top: 65px;
-      right: 70px;
+      top: 75px;
+      right: 79px;
       width: 70px;
+
       text-align: center;
       .text-parameter(17px, 17px, 700, @header-top-link-1-color);
     }
 
     &__table {
       width: 290px;
+
+      margin-top: -4px;
+
+      p {
+        margin-bottom: 36px;
+
+        .text-parameter(17px, 30px, 400, #444);
+      }
+    }
+
+    &__table li {
+      padding-right: 0px;
     }
 
     img {
       position: absolute;
-      top: 150px;
+      top: 126px;
       right: 50px;
     }
 
-    &__btn {
-      width: 290px;
-    }
 
     &__price {
       width: 290px;
+
       margin-top: 50px;
+      margin-top: 56px;
+
+      .text-parameter(20px, 24px, 700, #444);
+    }
+
+    &__btn {
+      width: 291px;
+
+      margin-top: 34px;
     }
   }
 }
 
 @media (min-width: 1250px) {
   .order-product {
-    padding-left: 275px;
-    margin-top: 100px;
-
-    &__img-tab {
-      display: none;
-    }
-
-    &__img-desktop {
-      display: block;
-    }
+    padding: 0 100px;
+    padding-left: 271px;
 
     h2 {
+      margin-top: 126px;
+
       .text-parameter(53px, 57px, 700);
+    }
+
+    &__week-product {
+      left: 147px;
+      top: 158px;
+    }
+
+    &__table {
+      margin-top: -12px;
+      margin-left: 4px;
+
+      p {
+        margin-bottom: 50px;
+
+        .text-parameter(17px, 30px, 400, #444);
+      }
     }
 
     img {
       right: 100px;
-      top: 0px;
+      top: 46px;
       z-index: -1;
     }
 
-    &__week-product {
-      position: absolute;
-      left: 120px;
+    &__price {
+      margin-top: 108px;
+      margin-left: 5px;
     }
 
-    &__price {
-      margin-top: 110px;
+    &__btn {
+      margin-left: 5px;
     }
   }
 }
