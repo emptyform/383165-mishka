@@ -1,6 +1,9 @@
-.header-top {
-  background-image: none;
+.header-top-form {
   background-color: #f1f1f1;
+
+  &__title {
+    margin-bottom: 76px;
+  }
 }
 
 .main-form {
@@ -8,8 +11,10 @@
   flex-direction: column;
 
   p {
-    .text-parameter(13px, 24px, 400, #444);
+    margin-top: 22px;
     padding: 0 30px;
+
+    .text-parameter(13px, 24px, 400, #444);
   }
 }
 
@@ -25,45 +30,84 @@
     display: none;
   }
 
-  input[type="radio"] + label,
-  input[type="checkbox"] + label {
-    .text-parameter(17px, 18px, 700,);
-    cursor: pointer;
-  }
-
   input[type="radio"] + label::before,
   input[type="checkbox"] + label::before {
     content: "";
-    display: inline-block;
-    width: 40px;
-    height: 39px;
+    display: block;
+    position: absolute;
+    left: -62px;
+    top: -8px;
+
     border: 2px solid #444;
     background-image: url(../img/spritesheet.png);
     background-repeat: no-repeat;
     background-position: -50px -50px;
   }
 
+  input[type="checkbox"] + label::before {
+    left: -63px;
+    top: -10px;
+
+    width: 36px;
+    height: 35px;
+  }
+
   input[type="radio"] + label::before {
+    width: 35px;
+    height: 35px;
+
     border-radius: 50%;
   }
 
   input[type="radio"]:checked + label::before {
-    background-position: -8px -8px;
+    background-position: -10px -10px;
   }
 
   input[type="checkbox"]:checked + label::before {
-    background-position: -10px -65px;
+    background-position: -13px -66px;
   }
 
-  fieldset {
-    border: none;
-    border-top: 1px solid @header-top-link-1-color;
+  input[type="radio"] + label,
+  input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    width: 195px;
+
+    margin-top: 23px;
+
+    .text-parameter(17px, 18px, 700);
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] + label {
+    margin-bottom: 20px;
+  }
+
+  &__section-type ul,
+  &__section-color ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__section-type,
+  &__section-color,
+  &__section-name,
+  &__section-contacts,
+  &__section-mail,
+  &__section-text {
     padding: 0;
     margin-top: 10px;
+    padding-top: 12px;
+    padding-bottom: 35px;
+
+    border: none;
+    border-top: 1px solid @header-top-link-1-color;
   }
 
   legend {
-    padding-right: 10px;
+    padding-right: 20px;
+
     text-transform: uppercase;
     .text-parameter(17px, 16px, 700, @header-top-link-1-color);
   }
@@ -73,39 +117,99 @@
   input[type="tel"] {
     display: block;
     border: none;
-    margin-top: 10px;
-    margin-bottom: 10px;
   }
 
-  &__full-name li,
-  &__full-contact li {
+  &__section-name {
+    margin-top: -12px;
+    padding-top: 7px;
+  }
+
+  &__section-name label {
+    margin-bottom: 16px;
+    margin-top: 22px;
+  }
+
+  &__section-name li {
+    padding-bottom: 14px;
+  }
+
+  &__section-contacts {
+    margin-top: -4px;
+    padding-top: 23px;
+  }
+
+  &__section-contacts li {
+    padding-bottom: 14px;
+  }
+
+  &__section-mail {
+    margin-top: -3px;
+    padding-top: 23px;
+  }
+
+  &__section-mail li {
+    padding-bottom: 14px;
+  }
+
+  &__section-text {
+    margin-top: -3px;
+    padding-top: 25px;
+    padding-bottom: 0;
+  }
+
+  &__section-name li,
+  &__section-contacts li,
+  &__section-mail li {
     border-bottom: 2px solid #000;
 
     label {
       display: block;
+
       .text-parameter(17px, 18px, 700,);
-      margin-top: 10px;
     }
   }
 
-  textarea {
-    border: 2px solid #000;
-    .text-parameter(17px, 18px, 400, #444);
-    width: 260px;
-  }
-
-  &__btn {
-    width: 260px;
-  }
-
-  &__full-contact li {
+  &__section-contacts li,
+  &__section-mail li {
     position: relative;
 
     svg {
       position: absolute;
-      right: 0;
-      top: 0;
+      right: 2px;
+      bottom: 7px;
     }
+  }
+
+  &__section-contacts li {
+    svg {
+      right: 6px;
+      bottom: 14px;
+    }
+  }
+
+  textarea {
+    width: 216px;
+    height: 99px;
+    margin-left: -2px;
+    padding: 20px;
+
+    border: 2px solid #000;
+    .text-parameter(17px, 18px, 400, rgba(68, 68, 68, 0.3));
+  }
+
+  &__required-text {
+    display: block;
+    width: 260px;
+    margin: 0 auto;
+    margin-top: 12px;
+    padding: 0;
+    .text-parameter(14px, 16px, #444);
+  }
+
+  &__btn {
+    width: 260px;
+    margin-top: 31px;
+    margin-bottom: 16px;
   }
 }
 
