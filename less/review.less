@@ -2,34 +2,59 @@
   display: flex;
   flex-direction: column;
   padding: 0 30px;
-  margin-top: 30px;
 
   h2 {
+    margin-top: 38px;
+    margin-left: -2px;
+
     .text-parameter(25px, 30px, 700);
   }
 }
 
 .review-slider {
   p {
+    margin-top: 3px;
+
     .text-parameter(15px, 30px, 400, #444);
+  }
+
+  &__user {
+    display: block;
+
+    margin-top: 30px;
+
+    .text-parameter(17px, 17px, 700,);
+  }
+
+  & &__user-mail {
+    display: block;
+
+    margin-top: 13px;
+
+    .text-parameter(17px, 17px, 400, #444);
   }
 
   &__btn-block {
     display: flex;
-    margin-top: 30px;
-    margin-bottom: 30px;
+
+    margin-top: 21px;
   }
 
   &__left,
   &__right {
     width: 50%;
+    padding: 10px;
+
     background: none;
     border: 1px solid #ececec;
-    padding: 10px;
   }
 
   &__right {
     transform: scale(-1, 1);
+  }
+
+  &__btn {
+    margin-top: 36px;
   }
 }
 
@@ -38,12 +63,20 @@
     position: relative;
     flex-direction: row;
     flex-wrap: wrap;
+
     padding: 0 50px;
+    padding-bottom: 36px;
+    margin-top: 38px;
+
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
 
     h2 {
       order: 1;
+
+      margin-top: 77px;
+      margin-left: -4px;
+
       .text-parameter(43px, 50px, 700);
     }
   }
@@ -53,37 +86,83 @@
 
     &__btn {
       order: 2;
-      width: 175px;
-      margin-left: auto;
       align-self: center;
+      width: 175px;
+
+      margin-left: auto;
+      margin-top: 46px;
+
+    }
+
+    p {
+      margin-top: 13px;
+      margin-left: -1px;
+
+      .text-parameter(17px, 30px, 400, #444);
+    }
+
+    &__user {
+      margin-top: 60px;
+      margin-left: -1px;
+
+      .text-parameter(18px, 18px, 700);
     }
 
     &__btn-block {
       position: absolute;
-      bottom: -20px;
-      right: 50px;
+      bottom: 48px;
+      right: 59px;
+    }
+
+    &__right {
+      margin-left: 17px;
     }
 
     &__left,
     &__right {
       border: none;
     }
-
-    &__user {
-      .text-parameter(17px, 30px, 700);
-    }
   }
 }
 
 @media (min-width: 1250px) {
   .review {
-    padding-left: 275px;
-    padding-right: 100px;
+    width: 1050px;
+
+    margin: 0 auto;
+    margin-top: 45px;
+    padding: 0;
+    padding-bottom: 100px;
+
+    h2 {
+      margin-top: 70px;
+      margin-left: 171px;
+
+      .text-parameter(53px, 57px, 700);
+    }
   }
 
   .review-slider {
+    p {
+      margin-left: 176px;
+      margin-top: 4px;
+    }
+
+    &__btn {
+      margin-top: 39px;
+    }
+
+    &__user {
+      margin-left: 175px;
+      margin-top: 43px;
+
+      .text-parameter(17px, 17px, 700);
+    }
+
+
     &__btn-block {
-      right: 100px;
+      right: 9px;
+      bottom: 112px;
     }
   }
 }

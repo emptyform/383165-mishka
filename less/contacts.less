@@ -2,28 +2,46 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 0 30px;
-  margin-top: 50px;
 
-  &__map-tab--none,
-  &__map-desktop--none {
-    display: none;
+  padding: 0 30px;
+
+  h2 {
+    margin-top: 86px;
+    .text-parameter(18px, 30px, 700);
   }
 
   &__table {
-    .table-style();
-    width: 250px;
-    .text-parameter(15px, 30px, 400);
+    display: flex;
+    flex-direction: column;
+    width: 260px;
 
-    li:first-of-type {
-      width: 50px;
-      padding-right: 20px;
+    margin-top: 11px;
+
+    ul {
+      .list-style-none();
+      display: flex;
+      flex-direction: row;
+
+      margin-bottom: 29px;
+
+      li:first-of-type {
+        margin-right: 30px;
+      }
+    }
+
+    ul:last-child {
+      margin-bottom: 0;
+    }
+
+    li {
+      .text-parameter(15px, 30px, 400, #444);
     }
   }
 
-  h2 {
-    margin-bottom: 30px;
-    .text-parameter(18px, 30px, 700);
+  &__table-row-2 {
+    li:last-child {
+      width: 150px;
+    }
   }
 
   &__mail {
@@ -33,19 +51,21 @@
   &__map {
     position: relative;
     margin-left: -30px;
-    margin-top: 30px;
+    margin-top: 37px;
   }
 
   &__map svg {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 50%-1px;
+    left: 50%-3px;
     transform: translateX(-60%) translateY(-60%);
     fill: @header-top-link-1-color;
   }
 
-  &__map img {
-    margin-bottom: 30px;
+  &__map-btn {
+    margin-top: 36px;
+
+    .text-parameter(18px, 20px, 700, #444);
   }
 
   &__flag--none {
@@ -59,13 +79,13 @@
     flex-wrap: wrap;
     padding: 0 50px;
 
-    &__map-mobile--none {
-      display: none;
-    }
+    h2 {
+      width: 60%;
 
-    &__map-tab--none {
-      display: block;
-      margin-left: -15px;
+      margin-top: 146px;
+      margin-left: -3px;
+
+      .text-parameter(43px, 50px, 700);
     }
 
     &__flag--none {
@@ -74,39 +94,49 @@
 
     &__flag {
       position: absolute;
-      right: 170px;
-      top: 20px;
+      right: 153px;
+      top: 132px;
+    }
+
+    &__table  {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 668px;
+
+      margin-top: 13px;
+
+      ul {
+        margin-bottom: 0;
+
+        li:first-of-type {
+          margin-right: 24px;
+        }
+      }
+
+      li {
+        .text-parameter(17px, 30px, 400);
+      }
+    }
+
+    &__table-row-2 {
+      li:last-child {
+        width: 200px;
+
+        margin-right: 59px;
+      }
     }
 
     &__map {
       width: 100%;
-    }
 
-    &__table  {
-      display: flex;
-      width: 668px;
-      .text-parameter(17px, 30px, 400);
-      padding: 0;
-      margin: 0;
-
-      ul {
-        width: 50%;
-        padding: 0;
-        margin:0;
-      }
-
-      li:first-child {
-        width: 25%;
-      }
-    }
-
-    h2 {
-      .text-parameter(43px, 50px, 700);
-      width: 60%;
+      margin-top: 56px;
     }
 
     &__map-btn {
-      margin: 0 auto;
+      width: 230px;
+      margin-left: 219px;
+      margin-top: 52px;
     }
   }
 }
@@ -114,38 +144,56 @@
 @media (min-width: 1250px) {
   .contacts {
     position: relative;
+    width: 875px;
+
+    margin-left: 274px;
+    padding: 0;
 
     h2 {
-      width: 100%;
+      .text-parameter(53px, 57px, 700);
+      margin-top: 216px;
+      margin-left: -4px;
     }
 
+    &__table  {
+      flex-direction: column;
+      width: 668px;
 
-    &__table {
-      .table-style();
-      width: 30%;
+      margin-top: 5px;
+
+      ul {
+        margin-bottom: 28px;
+      }
+
+      li {
+        .text-parameter(17px, 30px, 400);
+      }
     }
 
-    &__map-tab--none {
-      display: none;
+    &__table-row-2 {
+      li:last-child {
+        width: 200px;
+
+        margin-right: 59px;
+      }
     }
 
-    &__map-desktop--none {
-      display: block;
-      position: absolute;
-      bottom: -200px;
-      right: 100px;
-      z-index: -2;
-    }
-
-    &__map-btn {
-      margin-right: auto;
-      margin-left: 0;
-      margin-top: 100px;
+    &__map {
+      img {
+        position: absolute;
+        right: -30px;
+        bottom: -77px;
+      }
     }
 
     &__flag {
-      left: 0px;
-      top: 20px;
+      top: 208px;
+      left: -111px;
+    }
+
+    &__map-btn {
+      margin-left: 1px;
+      margin-top: 24px;
     }
   }
 }
