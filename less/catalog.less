@@ -1,4 +1,7 @@
 .header-top-catalog {
+  background-image: none;
+  background-color: #f1f1f1;
+
   &__title {
     margin-bottom: 76px;
   }
@@ -23,7 +26,9 @@
   border: 1px solid #ededed;
 
   img {
-    width: auto;
+    display: block;
+    width: 260px;
+    height: 195px;
   }
 
   &__option {
@@ -90,6 +95,7 @@
 
     background-image: url("../img/video-mobile@1x.jpg");
     background-repeat: no-repeat;
+    background-size: 260px 150px;
   }
 
   p {
@@ -115,6 +121,17 @@
   }
 }
 
+// адаптив фона video в каталоге
+
+@media (min-width: 320px) and (min-resolution: 144dpi),
+(min-width: 320px) and (min-resolution: 1.5dppx) {
+  .catalog-video {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
+}
+
+// конец адаптива фона video в каталоге
+
 @media (min-width: 768px) {
   .header-top-catalog {
     &__title {
@@ -139,7 +156,7 @@
     }
 
     img {
-      width: 334px;
+      width: 333px;
       height: 332px;
     }
 
@@ -184,6 +201,9 @@
       height: 455px;
 
       margin: 0;
+
+      background-image: url("../img/video-tablet@1x.jpg");
+      background-size: 668px 455px;
     }
 
     &__play {
@@ -220,20 +240,22 @@
   }
 }
 
+// адаптив фона video в каталоге
+
+@media (min-width: 768px) and (min-resolution: 144dpi),
+(min-width: 768px) and (min-resolution: 1.5dppx) {
+  .catalog-video {
+    background-image: url("../img/video-tablet@2x.jpg");
+  }
+}
+
+// конец адаптива фона video в каталоге
+
 @media (min-width: 1250px) {
   .header-top-catalog {
     &__title {
       margin-top: 93px;
       margin-bottom: 101px;
-    }
-  }
-
-  .footer-catalog {
-    width: 1150px;
-
-    .footer__copyrights {
-      right: 50px;
-      top: 32px;
     }
   }
 
@@ -301,6 +323,9 @@
       height: 455px;
       left: 0;
       top: 0;
+
+      background-image: url("../img/video-desktop@1x.jpg");
+      background-size: 682px 455px;
     }
 
     &__icon {
@@ -314,3 +339,14 @@
     }
   }
 }
+
+// адаптив фона video в каталоге
+
+@media (min-width: 1250px) and (min-resolution: 144dpi),
+(min-width: 1250px) and (min-resolution: 1.5dppx) {
+  .catalog-video {
+    background-image: url("../img/video-desktop@2x.jpg");
+  }
+}
+
+// конец адаптива фона video в каталоге
