@@ -76,6 +76,23 @@
   &__flag--none {
     display: none;
   }
+
+  // зиг-заг
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 10px;
+    width: 100%;
+    top: 45px;
+    left: 0;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-size: auto 6px;
+    background-position: ;
+  }
 }
 
 @media (min-width: 768px) {
@@ -149,6 +166,15 @@
       margin-left: 219px;
       margin-top: 52px;
     }
+
+    // зиг-заг
+
+    &::before {
+      height: 17px;
+      top: 70px;
+
+      background-size: auto 15px;
+    }
   }
 }
 
@@ -205,6 +231,15 @@
     &__map-btn {
       margin-left: 1px;
       margin-top: 24px;
+    }
+
+    // зиг-заг
+
+    &::before {
+      height: 25px;
+      top: 53px;
+
+      background-size: auto 22px;
     }
   }
 }

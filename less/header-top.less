@@ -73,6 +73,7 @@
 
 @media (min-width: 768px) {
   .header-top {
+    position: relative;
     background-image: url("../img/hero-desktop@1x.jpg");
     background-position: center 88px;
     background-size: 1150px 746px;
@@ -110,6 +111,24 @@
       top: 32px;
       right: 34px;
     }
+
+
+    // волнистая заливка
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 25px;
+      width: 100%;
+      bottom: -15px;
+      left: 0px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: auto 23px;
+      background-position: -3px 0;
+    }
   }
 }
 
@@ -138,6 +157,17 @@
     &__links {
       padding: 100px;
       padding-bottom: 0;
+    }
+
+    // волнистая заливка
+
+    &::after {
+      height: 40px;
+      width: 100%;
+      bottom: -25px;
+
+      background-size: auto 36px;
+      background-position: -43px 0;
     }
   }
 }
