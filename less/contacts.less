@@ -54,6 +54,11 @@
     margin-top: 37px;
   }
 
+  &__map-image {
+    width: 320px;
+    height: 457px;
+  }
+
   &__map svg {
     position: absolute;
     top: 50%-1px;
@@ -70,6 +75,23 @@
 
   &__flag--none {
     display: none;
+  }
+
+  // зиг-заг
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    height: 10px;
+    width: 100%;
+    top: 45px;
+    left: 0;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-size: auto 6px;
+    background-position: ;
   }
 }
 
@@ -131,12 +153,27 @@
       width: 100%;
 
       margin-top: 56px;
+      margin-left: -50px;
+    }
+
+    &__map-image {
+      width: 768px;
+      height: 457px;
     }
 
     &__map-btn {
       width: 230px;
       margin-left: 219px;
       margin-top: 52px;
+    }
+
+    // зиг-заг
+
+    &::before {
+      height: 17px;
+      top: 70px;
+
+      background-size: auto 15px;
     }
   }
 }
@@ -178,12 +215,12 @@
       }
     }
 
-    &__map {
-      img {
-        position: absolute;
-        right: -30px;
-        bottom: -77px;
-      }
+    &__map-image {
+      position: absolute;
+      right: -51px;
+      bottom: -76px;
+      width: 525px;
+      height: 457px;
     }
 
     &__flag {
@@ -194,6 +231,15 @@
     &__map-btn {
       margin-left: 1px;
       margin-top: 24px;
+    }
+
+    // зиг-заг
+
+    &::before {
+      height: 25px;
+      top: 53px;
+
+      background-size: auto 22px;
     }
   }
 }

@@ -1,4 +1,5 @@
 .review {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 0 30px;
@@ -70,6 +71,7 @@
 
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
+    background-size: 350px 457px;
 
     h2 {
       order: 1;
@@ -124,6 +126,17 @@
     }
   }
 }
+
+// адаптив фона mobile в отзывах
+
+@media (min-width: 768px) and (min-resolution: 144dpi),
+(min-width: 768px) and (min-resolution: 1.5dppx) {
+  .review {
+    background-image: url(../img/review@2x.jpg);
+  }
+}
+
+// конец адаптива фона mobile в отзывах
 
 @media (min-width: 1250px) {
   .review {

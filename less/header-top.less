@@ -6,6 +6,10 @@
   margin: 0 auto;
 
   background-color: @header-top-bg-color;
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center 62px;
+  background-size: 574px 372px;
 
   &__title {
     padding: 0 30px;
@@ -56,8 +60,23 @@
   }
 }
 
+// адаптив фона mobile в шапке
+
+@media (min-width: 320px) and (min-resolution: 144dpi),
+(min-width: 320px) and (min-resolution: 1.5dppx) {
+  .header-top {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
+}
+
+// конец адаптива фона mobile в шапке
+
 @media (min-width: 768px) {
   .header-top {
+    position: relative;
+    background-image: url("../img/hero-desktop@1x.jpg");
+    background-position: center 88px;
+    background-size: 1150px 746px;
 
     &__title {
       margin-top: 153px;
@@ -92,11 +111,42 @@
       top: 32px;
       right: 34px;
     }
+
+
+    // волнистая заливка
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 25px;
+      width: 100%;
+      bottom: -15px;
+      left: 0px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: auto 23px;
+      background-position: -3px 0;
+    }
   }
 }
 
+// адаптив фона tab в шапке
+
+@media (min-width: 768px) and (min-resolution: 144dpi),
+(min-width: 768px) and (min-resolution: 1.5dppx) {
+  .header-top {
+    background-image: url("../img/hero-desktop@2x.jpg");
+  }
+}
+
+// конец адаптива фона tab в шапке
+
 @media (min-width: 1250px) {
   .header-top {
+    background-position: center 88px;
+    background-size: 1250px 746px;
 
     &__title {
       margin-bottom: 258px;
@@ -107,6 +157,17 @@
     &__links {
       padding: 100px;
       padding-bottom: 0;
+    }
+
+    // волнистая заливка
+
+    &::after {
+      height: 40px;
+      width: 100%;
+      bottom: -25px;
+
+      background-size: auto 36px;
+      background-position: -43px 0;
     }
   }
 }
