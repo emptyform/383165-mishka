@@ -2,11 +2,13 @@
   position: relative;
   display: flex;
   flex-direction: column;
-
-  padding: 0 30px;
+  align-items: center;
 
   h2 {
     margin-top: 86px;
+    margin-right: auto;
+    margin-left: 28px;
+
     .text-parameter(18px, 30px, 700);
   }
 
@@ -50,7 +52,6 @@
 
   &__map {
     position: relative;
-    margin-left: -30px;
     margin-top: 37px;
   }
 
@@ -99,13 +100,12 @@
   .contacts {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0 50px;
 
     h2 {
       width: 60%;
 
       margin-top: 146px;
-      margin-left: -3px;
+      margin-left: 47px;
 
       .text-parameter(43px, 50px, 700);
     }
@@ -116,8 +116,8 @@
 
     &__flag {
       position: absolute;
-      right: 153px;
-      top: 132px;
+      right: 54px;
+      top: 130px;
     }
 
     &__table  {
@@ -126,6 +126,7 @@
       justify-content: space-between;
       width: 668px;
 
+      margin-left: 50px;
       margin-top: 13px;
 
       ul {
@@ -153,7 +154,6 @@
       width: 100%;
 
       margin-top: 56px;
-      margin-left: -50px;
     }
 
     &__map-image {
@@ -163,7 +163,7 @@
 
     &__map-btn {
       width: 230px;
-      margin-left: 219px;
+      margin: 0 auto;
       margin-top: 52px;
     }
 
@@ -181,15 +181,14 @@
 @media (min-width: 1250px) {
   .contacts {
     position: relative;
-    width: 875px;
+    width: 1050px;
 
-    margin-left: 274px;
     padding: 0;
 
     h2 {
       .text-parameter(53px, 57px, 700);
       margin-top: 216px;
-      margin-left: -4px;
+      margin-left: 170px;
     }
 
     &__table  {
@@ -197,6 +196,7 @@
       width: 668px;
 
       margin-top: 5px;
+      margin-left: 174px;
 
       ul {
         margin-bottom: 28px;
@@ -225,11 +225,15 @@
 
     &__flag {
       top: 208px;
-      left: -111px;
+      left: 62px;
+    }
+
+    &__map {
+      margin-right: 50px;
     }
 
     &__map-btn {
-      margin-left: 1px;
+      margin-left: 175px;
       margin-top: 24px;
     }
 
