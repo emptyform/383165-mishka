@@ -62,9 +62,8 @@
 
   &__map svg {
     position: absolute;
-    top: 50%-1px;
-    left: 50%-3px;
-    transform: translateX(-60%) translateY(-60%);
+    top: 165px;
+    right: 130px;
     fill: @header-top-link-1-color;
   }
 
@@ -156,6 +155,10 @@
       margin-top: 56px;
     }
 
+    &__map svg {
+      right: 355px;
+    }
+
     &__map-image {
       width: 768px;
       height: 457px;
@@ -178,7 +181,7 @@
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1150px) {
   .contacts {
     position: relative;
     width: 1050px;
@@ -221,6 +224,14 @@
       bottom: -76px;
       width: 525px;
       height: 457px;
+      z-index: 200;
+    }
+
+    &__map svg {
+      position: absolute;
+      top: -218px;
+      right: 172px;
+      z-index: 400;
     }
 
     &__flag {

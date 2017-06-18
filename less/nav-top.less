@@ -14,8 +14,10 @@
 
   &__menu {
     position: absolute;
-    top: 79px;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    top: 79px;
     z-index: 100;
 
     background-color: #fff;
@@ -200,8 +202,9 @@
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1150px) {
   .nav-top {
+    padding: 0 50px;
 
     &__logo {
       padding: 0;
@@ -217,9 +220,6 @@
 
     &__menu {
       width: 1050px;
-
-      padding: 0 100px;
-      margin: 0;
     }
 
     &__new--none,

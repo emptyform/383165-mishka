@@ -24,6 +24,7 @@
   padding-bottom: 27px;
 
   border: 1px solid #ededed;
+  box-sizing: border-box;
 
   img {
     display: block;
@@ -161,7 +162,12 @@
     }
 
     &__option {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
       h3 {
+        width: 234px;
         margin-top: 16px;
 
         .text-parameter(20px, 24px, 700);
@@ -175,9 +181,13 @@
     }
 
     &__price {
-      margin-top: 177px;
+      width: 270px;
+      margin-top: auto;
+      margin-bottom: 25px;
       margin-left: 5px;
+      margin-right: 0px;
 
+      border-top: 1px solid #ececec;
       .text-parameter(17px, 24px, 700);
     }
 
@@ -251,7 +261,7 @@
 
 // конец адаптива фона video в каталоге
 
-@media (min-width: 1250px) {
+@media (min-width: 1150px) {
   .header-top-catalog {
     &__title {
       margin-top: 93px;
@@ -263,7 +273,8 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 100px;
+
+    padding: 0 50px;
     padding-bottom: 0px;
     margin-bottom: -25px;
   }
@@ -271,8 +282,10 @@
   .catalog-item {
     flex-direction: column;
     width: 316px;
+    min-height: 658px;
 
     margin-top: 131px;
+
 
     &:first-child {
       margin-top: 131px;
@@ -281,10 +294,6 @@
     img {
       width: 316px;
       height: 462px;
-    }
-
-    &__price {
-      margin-top: 40px;
     }
   }
 
@@ -334,16 +343,16 @@
       margin-top: 43px;
     }
 
-    &__btn {
-
+    &__play {
+      left: 290px;
     }
   }
 }
 
 // адаптив фона video в каталоге
 
-@media (min-width: 1250px) and (min-resolution: 144dpi),
-(min-width: 1250px) and (min-resolution: 1.5dppx) {
+@media (min-width: 1150px) and (min-resolution: 144dpi),
+(min-width: 1150px) and (min-resolution: 1.5dppx) {
   .catalog-video {
     background-image: url("../img/video-desktop@2x.jpg");
   }
