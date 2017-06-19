@@ -10,6 +10,15 @@
   &__logo {
     padding: 22px 30px;
     padding-bottom: 19px;
+
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &__menu {
@@ -55,6 +64,23 @@
     text-align: left;
     text-decoration: none;
     .text-parameter(17px, 24px, 700);
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.6)
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    &:hover svg {
+      fill: #62d1ba;
+      opacity: 1;
+    }
+
+    &:active svg {
+      opacity: 0.3;
+    }
   }
 
   &__list--2 a {
