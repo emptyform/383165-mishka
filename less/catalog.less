@@ -24,6 +24,7 @@
   padding-bottom: 27px;
 
   border: 1px solid #ededed;
+  box-sizing: border-box;
 
   img {
     display: block;
@@ -38,12 +39,24 @@
 
     h3 {
       .text-parameter(17px, 24px, 700);
+
+      &:hover {
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      &:active {
+        color: rgba(0, 0, 0, 0.3);
+      }
     }
 
     p {
       margin-top: -12px;
 
       .text-parameter(13px, 30px, 400, #444);
+    }
+
+    a {
+      text-decoration: none;
     }
   }
 
@@ -65,10 +78,28 @@
     height: 19px;
 
     opacity: 0.2;
+
+    &:hover {
+      opacity: 1;
+      fill: @header-top-link-1-color;
+      cursor: pointer;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &:last-child {
     margin-bottom: 24px;
+  }
+
+  &:hover {
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -111,6 +142,16 @@
     position: absolute;
     top: 133px;
     left: 80px;
+
+    &:hover {
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(0.8);
+      opacity: 0.3;
+    }
   }
 
   &__btn {
@@ -118,6 +159,16 @@
 
     margin: 0 auto;
     margin-top: 25px;
+
+    &:hover {
+      background-color: #444;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
@@ -161,7 +212,12 @@
     }
 
     &__option {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+
       h3 {
+        width: 234px;
         margin-top: 16px;
 
         .text-parameter(20px, 24px, 700);
@@ -175,9 +231,14 @@
     }
 
     &__price {
-      margin-top: 177px;
-      margin-left: 5px;
+      width: 270px;
 
+      margin-top: auto;
+      margin-bottom: 25px;
+      margin-left: 5px;
+      margin-right: 0px;
+
+      border-top: 1px solid #ececec;
       .text-parameter(17px, 24px, 700);
     }
 
@@ -251,7 +312,7 @@
 
 // конец адаптива фона video в каталоге
 
-@media (min-width: 1250px) {
+@media (min-width: 1150px) {
   .header-top-catalog {
     &__title {
       margin-top: 93px;
@@ -263,7 +324,8 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0 100px;
+
+    padding: 0 50px;
     padding-bottom: 0px;
     margin-bottom: -25px;
   }
@@ -271,8 +333,10 @@
   .catalog-item {
     flex-direction: column;
     width: 316px;
+    min-height: 658px;
 
     margin-top: 131px;
+
 
     &:first-child {
       margin-top: 131px;
@@ -283,8 +347,14 @@
       height: 462px;
     }
 
+    &__option {
+      min-height: 184px;
+    }
+
     &__price {
-      margin-top: 40px;
+      margin-bottom: 24px;
+      margin-left: 0px;
+      margin-top: auto;
     }
   }
 
@@ -334,16 +404,16 @@
       margin-top: 43px;
     }
 
-    &__btn {
-
+    &__play {
+      left: 290px;
     }
   }
 }
 
 // адаптив фона video в каталоге
 
-@media (min-width: 1250px) and (min-resolution: 144dpi),
-(min-width: 1250px) and (min-resolution: 1.5dppx) {
+@media (min-width: 1150px) and (min-resolution: 144dpi),
+(min-width: 1150px) and (min-resolution: 1.5dppx) {
   .catalog-video {
     background-image: url("../img/video-desktop@2x.jpg");
   }

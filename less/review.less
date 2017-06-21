@@ -48,6 +48,14 @@
 
     background: none;
     border: 1px solid #ececec;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &__right {
@@ -56,6 +64,19 @@
 
   &__btn {
     margin-top: 36px;
+    text-align: center;
+
+    text-decoration: none;
+
+    &:hover {
+      background-color: #444;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
@@ -138,7 +159,7 @@
 
 // конец адаптива фона mobile в отзывах
 
-@media (min-width: 1250px) {
+@media (min-width: 1150px) {
   .review {
     width: 1050px;
 
@@ -157,6 +178,8 @@
 
   .review-slider {
     p {
+      width: 75%;
+
       margin-left: 176px;
       margin-top: 4px;
     }

@@ -2,11 +2,13 @@
   position: relative;
   display: flex;
   flex-direction: column;
-
-  padding: 0 30px;
+  align-items: center;
 
   h2 {
     margin-top: 86px;
+    margin-right: auto;
+    margin-left: 28px;
+
     .text-parameter(18px, 30px, 700);
   }
 
@@ -46,11 +48,19 @@
 
   &__mail {
     border-bottom: 1px solid @header-top-link-1-color;
+
+    &:hover {
+      color: @header-top-link-1-color;
+      cursor: pointer;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &__map {
     position: relative;
-    margin-left: -30px;
     margin-top: 37px;
   }
 
@@ -61,9 +71,8 @@
 
   &__map svg {
     position: absolute;
-    top: 50%-1px;
-    left: 50%-3px;
-    transform: translateX(-60%) translateY(-60%);
+    top: 165px;
+    right: 130px;
     fill: @header-top-link-1-color;
   }
 
@@ -71,6 +80,37 @@
     margin-top: 36px;
 
     .text-parameter(18px, 20px, 700, #444);
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #444;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &-map-interactive {
+    position: absolute;
+    width: 320px;
+    height: 457px;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 500;
+
+    iframe {
+      width: 320px;
+      height: 457px;
+    }
+  }
+
+  &-map-interactive--show {
+    display: block;
   }
 
   &__flag--none {
@@ -91,7 +131,6 @@
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
     background-size: auto 6px;
-    background-position: ;
   }
 }
 
@@ -99,13 +138,12 @@
   .contacts {
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 0 50px;
 
     h2 {
       width: 60%;
 
       margin-top: 146px;
-      margin-left: -3px;
+      margin-left: 47px;
 
       .text-parameter(43px, 50px, 700);
     }
@@ -116,8 +154,8 @@
 
     &__flag {
       position: absolute;
-      right: 153px;
-      top: 132px;
+      right: 54px;
+      top: 130px;
     }
 
     &__table  {
@@ -126,6 +164,7 @@
       justify-content: space-between;
       width: 668px;
 
+      margin-left: 50px;
       margin-top: 13px;
 
       ul {
@@ -153,7 +192,10 @@
       width: 100%;
 
       margin-top: 56px;
-      margin-left: -50px;
+    }
+
+    &__map svg {
+      right: 355px;
     }
 
     &__map-image {
@@ -163,8 +205,18 @@
 
     &__map-btn {
       width: 230px;
-      margin-left: 219px;
+      margin: 0 auto;
       margin-top: 52px;
+    }
+
+    &-map-interactive {
+      width: 768px;
+      height: 457px;
+
+      iframe {
+        width: 768px;
+        height: 457px;
+      }
     }
 
     // зиг-заг
@@ -178,18 +230,17 @@
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1150px) {
   .contacts {
     position: relative;
-    width: 875px;
+    width: 1050px;
 
-    margin-left: 274px;
     padding: 0;
 
     h2 {
       .text-parameter(53px, 57px, 700);
       margin-top: 216px;
-      margin-left: -4px;
+      margin-left: 170px;
     }
 
     &__table  {
@@ -197,6 +248,7 @@
       width: 668px;
 
       margin-top: 5px;
+      margin-left: 174px;
 
       ul {
         margin-bottom: 28px;
@@ -221,15 +273,39 @@
       bottom: -76px;
       width: 525px;
       height: 457px;
+      z-index: 200;
+    }
+
+    &__map svg {
+      position: absolute;
+      top: -218px;
+      right: 172px;
+      z-index: 400;
     }
 
     &__flag {
       top: 208px;
-      left: -111px;
+      left: 62px;
+    }
+
+    &__map {
+      margin-right: 50px;
+    }
+
+    &-map-interactive {
+      left: 526px;
+      top: -381px;
+      width: 525px;
+      height: 457px;
+
+      iframe {
+        width: 525px;
+        height: 457px;
+      }
     }
 
     &__map-btn {
-      margin-left: 1px;
+      margin-left: 175px;
       margin-top: 24px;
     }
 

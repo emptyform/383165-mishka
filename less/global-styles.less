@@ -13,9 +13,60 @@ body {
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1150px) {
   .container {
-  width: 1250px;
+  width: 1150px;
+  }
+}
+
+.wrapper-header {
+  position: relative;
+  width: 100%;
+
+  background-color: #f8f8f8;
+}
+
+@media (min-width: 768px) {
+  .wrapper-header {
+
+    // волнистая заливка
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 25px;
+      width: 100%;
+      bottom: -15px;
+      left: 0px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: auto 23px;
+      background-position: -35px 0;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .wrapper-header {
+
+    // волнистая заливка
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 57px;
+      width: 100%;
+      bottom: -42px;
+      left: 0px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: auto 35px;
+      background-position: -35px 0;
+    }
   }
 }
 
