@@ -11,12 +11,12 @@
     padding: 22px 30px;
     padding-bottom: 19px;
 
-    &:hover {
+    a:hover {
       opacity: 0.6;
       cursor: pointer;
     }
 
-    &:active {
+    a:active {
       opacity: 0.3;
     }
   }
@@ -40,13 +40,9 @@
     .btn-none-style();
   }
 
-  &__btn--close {
+  &__btn-close {
     right: 24px;
     top: 28px;
-  }
-
-  &__btn--open {
-    display: none;
   }
 
   &__list {
@@ -111,20 +107,17 @@
 
   // для скрипта
 
-  &__menu {
+  &__menu--hidden {
+    display: none;
+  }
+
+  &__btn--hidden {
     display: none;
   }
 
   &__menu--no-js {
     position: static;
-  }
-
-  &__btn--open {
-    display: block;
-  }
-
-  &__btn--close {
-    display: none;
+    display: flex;
   }
 }
 
@@ -147,6 +140,7 @@
     }
 
     &__menu {
+      position: absolute;
       top: 0;
       display: flex;
       flex-direction: row;

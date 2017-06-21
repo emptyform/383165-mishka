@@ -46,6 +46,16 @@
     background-size: 120px auto;
   }
 
+  &__radio li:hover input[type="radio"] + label::before,
+  &__checkbox li:hover input[type="checkbox"] + label::before {
+    border-color: @header-top-link-1-color;
+  }
+
+  &__radio li:active input[type="radio"] + label::before,
+  &__checkbox li:active input[type="checkbox"] + label::before {
+    border-color: #c7c7c7;
+  }
+
   input[type="checkbox"] + label::before {
     left: -63px;
     top: -10px;
@@ -166,6 +176,10 @@
   &__section-mail li {
     &:nth-child(2n) {
       border-bottom: 2px solid #000;
+
+      &:hover {
+        border-color: @header-top-link-1-color;
+      }
     }
 
     label {
@@ -173,11 +187,19 @@
 
       .text-parameter(17px, 18px, 700,);
     }
+
+    input {
+      color: #444;
+    }
   }
 
   &__section-contacts li,
   &__section-mail li {
     position: relative;
+
+    &:hover svg {
+      fill: @header-top-link-1-color;
+    }
 
     svg {
       position: absolute;
@@ -202,6 +224,10 @@
 
     border: 2px solid #000;
     .text-parameter(17px, 18px, 400, rgba(68, 68, 68, 0.3));
+
+    &:hover {
+      border-color: @header-top-link-1-color;
+    }
   }
 
   &__required-text {
@@ -220,6 +246,16 @@
 
     margin-top: 31px;
     margin-bottom: 16px;
+
+    &:hover {
+      background-color: #444;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   ::-webkit-input-placeholder {

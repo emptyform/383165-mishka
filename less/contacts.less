@@ -48,6 +48,15 @@
 
   &__mail {
     border-bottom: 1px solid @header-top-link-1-color;
+
+    &:hover {
+      color: @header-top-link-1-color;
+      cursor: pointer;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   &__map {
@@ -71,6 +80,18 @@
     margin-top: 36px;
 
     .text-parameter(18px, 20px, 700, #444);
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #444;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   &__flag--none {
