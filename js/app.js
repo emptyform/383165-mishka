@@ -10,12 +10,6 @@ var ordermodal = document.querySelector(".order-modal");
 
 var orderclose = document.querySelector(".order-modal__btn");
 
-var iconcart = document.querySelector(".catalog-item__icon");
-
-var map = document.querySelector(".contacts__map");
-
-var mapinter = document.querySelector(".contacts-map-interactive");
-
 // скрипт меню навигации
 
 if (menustock) {
@@ -54,16 +48,4 @@ orderbtn.addEventListener("click", function(event) {
 orderclose.addEventListener("click", function(event) {
   event.preventDefault();
   ordermodal.classList.remove("order-modal--show");
-});
-
-iconcart.addEventListener("click", function(event) {
-  event.preventDefault();
-  ordermodal.classList.add("order-modal--show");
-});
-
-// скрипт карты
-
-map.addEventListener("click", function(event) {
-  event.preventDefault();
-  mapinter.classList.add("contacts-map-interactive--show");
 });
