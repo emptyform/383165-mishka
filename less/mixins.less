@@ -1,80 +1,31 @@
-// миксин сброса стилей списка
-
-.list-style-none() {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-// миксин для таблицы на html5
-
-.table-style() {
-  display: table;
-
-  ul{
-    display: table-row;
-  }
-
-  li {
-    display: table-cell;
-  }
-}
-
-// миксин сброса стилей тега button
-
-.btn-none-style() {
-  background: none;
-  border: none;
-}
-
-// миксин для скрывания элементов
-
-.visually-hidden() {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-// миксин для псевдоэлементов after
-
-.after-element(@width: 0px, @height: 0px) {
+.clearfix() {
   &::after {
     content: "";
-    display: block;
-    width: @width;
-    height: @height;
+    display: table;
+    clear: both;
   }
 }
 
-// миксин для псевдоэлементов before
+.bg() {
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-.before-element(@width: 0px, @height: 0px) {
-  &::before {
-    content: "";
-    display: block;
-    width: @width;
-    height: @height;
+.ul() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.container() {
+  width: 260px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 668px;
   }
-}
 
-// миксин для параметров текста
-
-.text-parameter(@font-size: 16px, @line-height: 16px, @font-weight: 400, @color: #000) {
-  font-size: @font-size;
-  line-height: @line-height;
-  font-weight: @font-weight;
-  color: @color;
-}
-
-// миксин для веременной обводки
-
-.border(@color: red) {
-  border-width: 1px;
-  border-style: solid;
-  border-color: @color;
+  @media (min-width: 1150px) {
+    width: 1050px;
+  }
 }
