@@ -1,51 +1,53 @@
-var menustock = document.querySelector(".nav-top__menu");
+/*Меню на мобильнике*/
+var navMenu = document.querySelector(".main-nav");
+var navToggle = document.querySelector(".main-nav__toggle");
 
-var btnclose = document.querySelector(".nav-top__btn-close");
-
-var btnopen = document.querySelector(".nav-top__btn-open");
-
-var orderbtn = document.querySelector(".order-product__btn");
-
-var ordermodal = document.querySelector(".order-modal");
-
-var orderclose = document.querySelector(".order-modal__btn");
-
-// скрипт меню навигации
-
-if (menustock) {
-  menustock.classList.remove("nav-top__menu--no-js");
-}
-
-if (btnclose) {
-  btnclose.classList.add("nav-top__btn--hidden");
-}
-
-if (btnopen) {
-  btnopen.classList.remove("nav-top__btn--hidden");
-}
-
-btnopen.addEventListener("click", function(event) {
-  event.preventDefault();
-  menustock.classList.remove("nav-top__menu--hidden");
-  btnopen.classList.add("nav-top__btn--hidden");
-  btnclose.classList.remove("nav-top__btn--hidden");
+navMenu.classList.remove("main-nav--nojs");
+navToggle.addEventListener("click", function() {
+  if ( navMenu.classList.contains("main-nav--closed") ) {
+    navMenu.classList.remove("main-nav--closed");
+    navMenu.classList.add("main-nav--opened");
+  } else {
+    navMenu.classList.add("main-nav--closed");
+    navMenu.classList.remove("main-nav--opened");
+  }
 });
 
-btnclose.addEventListener("click", function(event) {
+/*Модальное окно*/
+var btn = document.querySelectorAll(".modal-open");
+var modal_bg = document.querySelector(".modal-bg");
+var modal = document.querySelector(".modal");
+var close = document.querySelector(".add-to-cart");
+
+for ( var i = 0; i < btn.length; i++) {
+  btn[i].addEventListener("click", function(event) {
+    event.preventDefault();
+    modal_bg.classList.add("modal-show");
+    modal.classList.add("modal-show");
+  })
+};
+
+close.addEventListener("click", function(event) {
   event.preventDefault();
-  menustock.classList.add("nav-top__menu--hidden");
-  btnclose.classList.add("nav-top__btn--hidden");
-  btnopen.classList.remove("nav-top__btn--hidden");
+  if ( modal_bg.classList.contains("modal-show") ) {
+    modal_bg.classList.remove("modal-show");
+    modal.classList.remove("modal-show");
+  }
 });
 
-// скрипт для модального окна
-
-orderbtn.addEventListener("click", function(event) {
+modal_bg.addEventListener("click", function(event) {
   event.preventDefault();
-  ordermodal.classList.add("order-modal--show");
+  if ( modal_bg.classList.contains("modal-show") ) {
+    modal_bg.classList.remove("modal-show");
+    modal.classList.remove("modal-show");
+  }
 });
 
-orderclose.addEventListener("click", function(event) {
-  event.preventDefault();
-  ordermodal.classList.remove("order-modal--show");
-});
+window.addEventListener("keydown", function(event) {
+  if (event.keyCode === 27) {
+    if ( modal_bg.classList.contains("modal-show") ) {
+      modal_bg.classList.remove("modal-show");
+      modal.classList.remove("modal-show");
+    }
+  }
+})
