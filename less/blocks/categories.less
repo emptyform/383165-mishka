@@ -60,6 +60,15 @@
   background-color: #46c1ae;
 }
 
+.categories__item--left:hover,
+.categories__item--right:hover {
+  transform: scaleY(1.05);
+}
+
+.categories__text:hover {
+  transform: translateY(-5px);
+}
+
 .categories__text {
   display: block;
   width: 260px;
@@ -96,6 +105,7 @@
 
 .categories__item:hover .categories__icon {
   fill: rgba(20, 144, 128, 0.7);
+  transform: translateY(-5px);
 }
 
 .categories__item:active .categories__icon {
