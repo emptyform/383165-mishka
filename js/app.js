@@ -51,3 +51,9 @@ window.addEventListener("keydown", function(event) {
     }
   }
 })
+
+/*карта*/
+
+var mapOpen = document.querySelector(".contacts__map");
+
+mapOpen.classList.remove("contacts__map--no-js");
